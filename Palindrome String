@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	long int t;
+	cin>>t;
+	while(t--)
+	{
+	    long int n;
+	    cin>>n;
+	    string str;
+	    cin>>str;
+	    int low=0;
+	    int high=n-1;
+	    if(str[high--]==str[low++])
+	    {
+	        cout<<"Yes"<<endl;
+	    }
+	    else 
+	    cout<<"No"<<endl;
+	}
+	return 0;
+}
