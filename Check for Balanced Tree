@@ -1,0 +1,19 @@
+// This function should return tree if passed  tree 
+// is balanced, else false. 
+int height(Node* node) //wrote this function,not given originally
+{  if(node==NULL)
+return 0;
+else
+    return 1+max(height(node->left),height(node->right));
+}
+
+bool isBalanced(Node *root)
+{  
+    if(root==NULL)
+    return 1;
+    int right=height(root->right);
+    int left=height(root->left);
+    if(abs(right-left)<=1 && isBalanced(root->left) && isBalanced(root->right))
+    return 1;
+   
+}
